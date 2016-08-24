@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Author: Zverev Dmitriy
 Updated: Luchko Serega
-Link: https://confluence.billing.ru/pages/viewpage.action?pageId=64397687
 Args:
     aduser: login to teamcity
     adpassword: password to teamcity
@@ -29,8 +27,8 @@ def write_to_json_file(ad_user, ad_password, build_id):
 
     # SET attributes
     print "Setting attributes..."
-    GROUP = "CRM_CMS"
-    PRODUCT_NAME = "OAPI_CMS_BACKEND"
+    GROUP = "CMS"
+    PRODUCT_NAME = "OAPI"
     APPLICATION_ID = "6150"
     GIT_HASH = xml_tree_build.find("revisions/revision").attrib['version']
     GIT_BRANCH = re.sub('refs/heads/', '', filter_by_tag(xml_tree_build.findall("properties/property"), "name", "project_branch_tag"))
