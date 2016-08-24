@@ -8,7 +8,6 @@ Args:
     adpassword: password to teamcity
     buildid: build id
 Example:
-    python scripts/infoJSONMaker/JSON_formatter.py --aduser Sergey.Luchko --adpassword myPassword --buildid 504480
 to get build id use %teamcity.build.id% in Command Line Runner in TeamCity
     python scripts/infoJSONMaker/JSON_formatter.py --aduser Your.Login --adpassword Your.Password --buildid %teamcity.build.id%
 """
